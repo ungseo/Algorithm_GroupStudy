@@ -44,15 +44,40 @@ def solution(numbers):
 ##### 17. 옷가게 할인 받기
 def solution(price):
     if price >= 500000:
-        sale = float(1/5)
+        sale = 0.2
     
     elif price >= 300000:
-        sale = float(1/10)
+        sale = 0.1
     
     elif price >= 100000:
-        sale = float(1/20)
-    
+        sale = 0.05
+
     else:
         sale = 0
     
-    return price*(1-sale)
+    return int(price*(1-sale))
+
+
+##### 18.아이스 아메리카노
+def solution(money):
+    aa = 5500
+    lst = [money//aa, money % aa]
+    return lst
+
+
+##### 19.나이 출력
+def solution(age):
+    answer = 2022 - age +1
+    return answer
+
+
+##### 20.배열 뒤집기
+def solution(num_list):
+    rev_lst = [0 for i in range(len(num_list))]
+    idx = 0 
+    for i in num_list[::-1]:
+        rev_lst[idx] = i
+        idx += 1
+    
+    return rev_lst
+

@@ -1,0 +1,146 @@
+##### 21.문자열 뒤집기
+
+
+
+```python
+def solution(my_string):
+    answer = my_string[::-1]
+    return answer
+```
+
+##### 22. 직각삼각형 출력하기
+
+
+
+```python
+n = int(input())
+for i in range(1,n+1):
+    print('*'*i)
+```
+
+
+
+##### 23. 짝수 홀수 개수
+
+
+
+```python
+def solution(num_list):
+    odd = 0
+    even = 0
+    for i in num_list:
+        if i % 2 == 0:
+            even += 1
+        else:
+            odd +=1
+    return [even,odd]
+```
+
+
+
+##### 24. 문자 반복 출력하기
+
+
+
+```python
+def solution(my_string, n):
+    string =''
+    for i in my_string:
+        string += i*n
+
+    return string
+```
+
+
+
+##### 25. 특정 문자 제거하기
+
+
+
+```python
+def solution(my_string, letter):
+    temp = []
+    for i in list(my_string):
+        if i == letter:
+            pass
+        else:
+            temp.append(i)
+    
+    return ''.join(temp)
+```
+
+
+
+##### 26. 각도기
+
+
+
+```python
+def solution(angle):
+    if angle < 90:
+        return 1
+    elif angle == 90:
+        return 2
+    elif angle < 180:
+        return 3
+    elif angle == 180:
+        return 4
+```
+
+
+
+##### 27. 양꼬치
+
+
+
+```python
+def solution(n, k):
+    service = n // 10
+    return 12000 * n + (k - service) * 2000
+
+print(solution(20,0))  ## 236000
+```
+
+###### 이러면 주문한 음료개수보다 서비스 개수가 더 많아지는 케이스가 생긴다.
+
+```python
+def solution(n, k):
+    service = n//10
+    drink = max(0, k-service) ##꼭 필요한 조건
+    return (12000*n)+(2000*drink)
+    ###수정
+```
+
+이 조건 안넣어도 문제통과가 되더라.. 다른사람 코드보고 알게된 조건
+
+
+
+##### 28.짝수의 합
+
+
+
+```python
+def solution(n):
+    rst = 0
+    for i in range(0,n+1,2):
+        rst += i
+    return rst
+```
+
+
+
+##### 29. 옹알이(1)
+
+
+
+```python
+def solution(babbling):
+    for i in babbling:
+        list().pop( )
+```
+
+
+
+레벨 0 제일 어려운문제부터 풀려고했는데 못풀었다. 절대못푼다. 다른사람 코드 보니까 내가 풀려고 했던 방법은 맞는데 구현을 못한다. 특히 교수님께서 내장함수 사용하지 말래서 더더욱 내 실력으로는 구현이 불가능한 문제.
+
+
