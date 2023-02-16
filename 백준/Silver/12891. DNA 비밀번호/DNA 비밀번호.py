@@ -48,4 +48,3 @@ for i in range(ll-lp):
     result += check(ACGT_cnt,min_ACGT)
 
 print(result)
-    
