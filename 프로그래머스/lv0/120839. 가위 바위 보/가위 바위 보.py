@@ -1,8 +1,11 @@
 def solution(rsp):
-    rsp =rsp.replace('2','s')
-    rsp =rsp.replace('5','p')
-    rsp =rsp.replace('0','r')
-    rsp =rsp.replace('r','5')
-    rsp =rsp.replace('s','0')
-    rsp =rsp.replace('p','2')
-    return rsp
+    answer = ''
+    rsp = list(map(int,map(str,rsp)))
+    for i in range(len(rsp)):
+        if rsp[i] == 2:
+            answer += str(0)
+        elif rsp[i] == 0:
+            answer += str(5)
+        else:
+            answer += str(2)
+    return answer
