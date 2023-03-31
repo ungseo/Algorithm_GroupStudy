@@ -1,15 +1,15 @@
 import sys
-
 input = sys.stdin.readline
-N, M = map(int, input().split())
-arr = list(map(int, input().split()))
 
-sum_list = [0]
-total = 0
-for i in range(len(arr)):
-    total += arr[i]
-    sum_list.append(total)
+n, m = map(int, input().split())
+lst = list(map(int, input().split()))
 
-for _ in range(M):
-    i, j = map(int, input().split())
-    print(sum_list[j] - sum_list[i - 1])
+# 부분합 계산
+prefix_sum = [0]
+for i in range(n):
+    prefix_sum.append(prefix_sum[-1] + lst[i])
+
+for i in range(m):
+    a, b = map(int, input().split())
+    # 부분합을 이용해 구간 합 계산
+    print(prefix_sum[b] - prefix_sum[a-1])
