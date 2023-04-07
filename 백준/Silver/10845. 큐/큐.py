@@ -1,16 +1,16 @@
 import sys
-
+from collections import deque
 input =sys.stdin.readline
 
 n = int(input())
-stack = []
+stack = deque()
 for i in range(n):
     cmd = list(input().split())
     if cmd[0] == 'push':
         stack.append(cmd[1])
     elif cmd[0] == 'pop':
         if stack:
-            a = stack.pop(0)
+            a = stack.popleft()
             print(a)
         else:
             print(-1)
