@@ -10,7 +10,7 @@ while cnt != n:
     if DAT[p] >= 1:
         DAT[p] -= 1
         cnt += 1
-        print(p)
+        sys.stdout.write(str(p) + '\n')
     else:
         p += 1
 
