@@ -29,3 +29,23 @@ for i in range(N + M):
     maze[st] = ed
 bfs()
 print(min(ans))
+# pointer = 1
+# me = 1
+# roll = 0
+# while maze[me] < 100:
+#     go = [0] * 7
+#     maxD = 0
+#     maxidx = 0
+#     for i in range(6, 0, -1):
+#         pointer = me + i
+#         if pointer > 100: continue
+#         go[i] = maze[pointer]
+#         if go[i] > maxD:
+#             maxD = go[i]
+#             maxidx = i
+#     me = maxD
+#     roll += 1
+#     if maze[me] == 100:
+#         break
+#
+# print(roll)
