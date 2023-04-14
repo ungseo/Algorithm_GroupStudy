@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 dice_lst = [list(map(int, input().split())) for _ in range(n)]  # 입력
 
