@@ -1,12 +1,12 @@
-def solution(n):
-    DAT = [1] * (n+1)
-    answer = []
-    for i in range(2, n+1):
-        if DAT[i] == 1:
-            if n % i == 0:
-                answer.append(i)
-        for j in range(i+i, n+1, i):
-            DAT[j] = 0
 
-            
+def solution(n):
+    answer = []
+    d = 2
+    while d <= n:
+        if n % d == 0:
+            n /= d
+            if d not in answer:
+                answer.append(d)
+        else:
+            d += 1
     return answer
