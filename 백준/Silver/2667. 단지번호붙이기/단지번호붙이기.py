@@ -14,9 +14,6 @@ def dfs(y, x):
         cnt += 1
         dfs(ny, nx)
 
-
-
-
 my = [-1, 0, 1, 0]
 mx = [0, 1, 0, -1]
 N = int(input().rstrip())
