@@ -61,18 +61,12 @@ while 1:
                 copy_ice[i][j] = -1
                 check(i, j)
                 land += 1
-                if land >= 2:
-                    flag = 1
-                    break
-    if land == 0:
-        flag = 2
-        if flag:
-            break
 
-    if flag:
+    if land >= 2:
+        print(time)
+        break
+    elif land == 0:
+        print(0)
         break
 
-if flag == 1:
-    print(time)
-else:
-    print(0)
+
