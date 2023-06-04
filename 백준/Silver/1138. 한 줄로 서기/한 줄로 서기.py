@@ -5,8 +5,6 @@ input = sys.stdin.readline
 
 def dfs(level):
     if level == N:
-        if path == [4, 2, 1, 3]:
-            de = 1
         flag = 1
         for i in range(1, 1 + N):
             cnt = 0
@@ -17,7 +15,8 @@ def dfs(level):
                     if cnt != memory[i - 1]:
                         flag = 0
                         break
-
+            if flag == 0:
+                break
         if flag == 1:
             print(*path)
         return
