@@ -36,5 +36,5 @@ def bfs():
 n, k = map(int, input().split())
 
 visited = [0] * 100001
-
+visited[n] = 1
 bfs()
