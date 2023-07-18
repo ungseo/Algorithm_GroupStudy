@@ -1,6 +1,4 @@
 import sys
-from collections import deque
-
 input = sys.stdin.readline
 
 
@@ -13,10 +11,6 @@ def bfs(y, x, lst):
         if chic_dis < min:
             min = chic_dis
     return min
-
-
-
-
 
 def dfs(level):
     if level == M:
