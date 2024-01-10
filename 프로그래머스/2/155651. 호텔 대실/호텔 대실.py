@@ -13,7 +13,6 @@ def solution(book_time):
     
     room = [bt[0][1]]
     cnt = 1
-    print(room)
     for i in range(1, len(bt)):
         min_HT = 21e8
         min_idx = 9999
@@ -28,4 +27,6 @@ def solution(book_time):
         else:
             room[min_idx] = bt[i][1]
     return cnt
+
+
 
