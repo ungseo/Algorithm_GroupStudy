@@ -22,11 +22,12 @@ def solution(n, wires):
     
     for i in wires:
         bit = [0] * (1+n)
+        cnt = 1
         v1, v2 = i[0], i[1]
+        bit[v1] = 1
+        
         tree[v1][v2] = 0
         tree[v2][v1] = 0
-        cnt = 1
-        bit[v1] = 1
         dfs(v1, n)
         tree[v1][v2] = 1
         tree[v2][v1] = 1
